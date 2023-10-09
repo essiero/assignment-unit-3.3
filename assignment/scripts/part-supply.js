@@ -37,27 +37,26 @@ console.log(supplyChanges);
 //      - If the value is a positive number, push it into the 'positives' array.
 //      - If the value is a negative number, push it into the 'negatives' array.
 //      - If the value is a zero, push it into the 'zeroes' array.
-// console.log('6. Looping through supplyChanges to populate arrays with positive, negative, and zero values:');
+console.log('6. Looping through supplyChanges to populate arrays with positive, negative, and zero values:');
 let positives = [];
 let negatives = [];
 let zeroes = [];
-for(let i=0, i<7, i++){
-  if(supplyChanges[i]>0){
-    negatives = [supplyChanges[i]];
-  }
-  if(supplyChanges[i]>0){
-    positives = [supplyChanges[i]];
-  }
+
+for(let i=0; i < supplyChanges.length; i++){
   if(supplyChanges[i]===0){
-    zeroes = [supplyChanges[i]];
+    zeroes.push(supplyChanges[i]);
+  }
+  if(supplyChanges[i]<0){
+    negatives.push(supplyChanges[i]);
+  }
+  if(supplyChanges[i]>0){
+    positives.push(supplyChanges[i]);
   }
 }
-console.log('Positives: ', positives);
-console.log('Negatives: ', negatives);
-console.log('Zeroes: ', zeroes);
-
-
-
+console.log('Positives', positives);
+console.log('Negatives', negatives);
+console.log('Zeroes', zeroes);
+//I ** s t r u g g l e d ** with question 6 for a LONG time before realizing I had written the syntax wrong, using commas instead of semicolons between parts of the for statement.
 
 // ***** STRETCH GOALS *********************************************
 // 7. Rewrite the 'for' loop from #6 as a 'for...of' loop. Instead of 'positives',
